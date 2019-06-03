@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="root" depthTest="ENABLE" minHeight="370.0" minWidth="400.0" style="-fx-background-color: #cae0ee;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.ClientController">
+   <bottom>
+      
+            <VBox>
+               <children>
+                  <HBox prefHeight="57.0" prefWidth="426.0" spacing="5.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" text="Name:" textAlignment="CENTER" textFill="#000000f7">
+                           <HBox.margin>
+                              <Insets top="8.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfName" alignment="CENTER" layoutY="50.0" promptText="Name bitte!">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="5.0" right="20.0" top="6.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                           </padding>
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="btnLos" alignment="CENTER" mnemonicParsing="false" onAction="#anmelden" prefHeight="30.0" prefWidth="80.0" text="LOS" textAlignment="CENTER">
+                           <padding>
+                              <Insets bottom="2.0" top="2.0" />
+                           </padding>
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="2.0" left="10.0" top="6.0" />
+                           </HBox.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                        </Button>
+                     </children>
+                     <opaqueInsets>
+                        <Insets left="10.0" />
+                     </opaqueInsets>
+                     <effect>
+                        <Blend mode="HARD_LIGHT" />
+                     </effect>
+                     <padding>
+                        <Insets left="15.0" top="5.0" />
+                     </padding>
+               <VBox.margin>
+                  <Insets bottom="2.0" top="2.0" />
+               </VBox.margin>
+                  </HBox>
+                  <HBox spacing="5.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label alignment="TOP_LEFT" text="IP-Adresse:" textAlignment="CENTER" textFill="#000000f7">
+                           <HBox.margin>
+                              <Insets bottom="2.0" top="6.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="ipAdress" alignment="CENTER" layoutY="50.0" minWidth="100.0" prefHeight="31.0" prefWidth="175.0" promptText="IP-Adresse" text="127.0.0.1">
+                           <HBox.margin>
+                              <Insets bottom="2.0" left="10.0" right="120.0" top="2.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="20.0" top="10.0" />
+                           </padding>
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                     <opaqueInsets>
+                        <Insets left="10.0" />
+                     </opaqueInsets>
+                     <effect>
+                        <Blend mode="HARD_LIGHT" />
+                     </effect>
+                     <padding>
+                        <Insets left="15.0" top="5.0" />
+                     </padding>
+               <VBox.margin>
+                  <Insets top="3.0" />
+               </VBox.margin>
+                  </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" spacing="10.0" style="-fx-background-color: white;">
+               <children>
+                  <Label alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="21.0" prefWidth="89.0" text="Port:" textAlignment="CENTER" textFill="#000000f7">
+                     <HBox.margin>
+                        <Insets bottom="2.0" top="6.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="port" alignment="CENTER" layoutY="50.0" minWidth="100.0" prefHeight="30.0" prefWidth="120.0" promptText="port" text="8080">
+                     <HBox.margin>
+                        <Insets bottom="2.0" right="50.0" top="2.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="20.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font>
+                  </TextField>
+               </children>
+               <opaqueInsets>
+                  <Insets left="10.0" />
+               </opaqueInsets>
+               <effect>
+                  <Blend mode="HARD_LIGHT" />
+               </effect>
+               <padding>
+                  <Insets bottom="10.0" left="15.0" top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="2.0" top="2.0" />
+               </VBox.margin>
+            </HBox>
+               </children>
+         <BorderPane.margin>
+            <Insets bottom="2.0" top="2.0" />
+         </BorderPane.margin>
+            </VBox>
+        
+   </bottom>
+   <top>
+      <BorderPane prefHeight="306.0" prefWidth="426.0" style="-fx-background-image: IMG_2627.jpgIMG_2627.jpg;" BorderPane.alignment="CENTER">
+         <top>
+            <Pane BorderPane.alignment="CENTER">
+               <children>
+                        <ImageView fx:id="ivMajesty" fitHeight="363.0" fitWidth="429.0" pickOnBounds="true">
+                           <effect>
+                              <Blend mode="SOFT_LIGHT" />
+                           </effect>
+                     <image>
+                        <Image url="@../images/Wonders.jpg" />
+                     </image>
+                        </ImageView>
+                  <Label alignment="TOP_LEFT" layoutX="121.0" layoutY="50.0" text="WONDERS" textAlignment="CENTER" textFill="#000000f7">
+                     <font>
+                        <Font name="Arial" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_LEFT" layoutX="89.0" layoutY="38.0" text="7" textAlignment="CENTER" textFill="#000000f7">
+                     <font>
+                        <Font name="Arial" size="57.0" />
+                     </font>
+                  </Label>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="2.0" />
+               </BorderPane.margin>
+            </Pane>
+         </top>
+      </BorderPane>
+   </top>
+</BorderPane>

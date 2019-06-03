@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="690.0" minWidth="1122.0" prefHeight="759.0" prefWidth="1132.0" style="-fx-background-color: #CD853F #CD853F #CD853F #CD853F;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.GameController">
+   <children>
+      <Pane prefHeight="292.0" prefWidth="1109.0" style="-fx-background-color: #CD853F #CD853F;">
+         <children>
+            <ImageView fitHeight="447.0" fitWidth="1132.0" layoutY="117.0" pickOnBounds="true" y="198.0">
+               <image>
+                  <Image url="@../images/Board_06_A.jpg" />
+               </image>
+               <effect>
+                  <Lighting diffuseConstant="2.0" specularConstant="2.0" specularExponent="21.54" surfaceScale="0.08">
+                     <bumpInput>
+                        <Shadow radius="4.75" width="0.0" />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </ImageView>
+            <HBox layoutX="93.0" layoutY="10.0" maxHeight="50.0" maxWidth="-Infinity" minHeight="35.0" prefHeight="50.0" prefWidth="1411.0">
+               <children>
+                  <Label fx:id="welcome" layoutX="10.0" layoutY="30.0" minHeight="-Infinity" text="Welcome" textFill="#110000">
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Arial Bold" size="31.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="spielerName" layoutY="30.0" text="Spieler" textFill="#140101">
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="100.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Arial Bold" size="31.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="ok" alignment="CENTER" mnemonicParsing="false" onAction="#spielBeginnen" prefHeight="84.0" prefWidth="187.0" text="Spiel beginnen!" textFill="#0a0000">
+                     <HBox.margin>
+                        <Insets bottom="50.0" left="70.0" right="20.0" top="25.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </opaqueInsets>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="97.0" layoutY="80.0" prefHeight="192.0" prefWidth="1394.0">
+               <children>
+                  <Button fx:id="stapelCard1" onAction="#checkCard" style="-fx-background-color: #CD853F #CD853F;">
+                      <graphic>
+					    <ImageView fx:id="img1" fitHeight="170.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
+					      <image>
+					        <Image url="@../images/cards/first.jpg" />
+					      </image>
+					    </ImageView>
+					 </graphic>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="stapelCard2" onAction="#checkCard" style="-fx-background-color: #CD853F #CD853F;">
+                   	 <graphic>
+					    <ImageView fx:id="img2" fitHeight="170.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: #CD853F #CD853F;">
+					      <image>
+					        <Image url="@../images/cards/first.jpg" />
+					      </image>
+					    </ImageView>
+					 </graphic>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="stapelCard3" onAction="#checkCard" style="-fx-background-color: #CD853F #CD853F;">
+                      <graphic>
+					    <ImageView fx:id="img3" fitHeight="170.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
+					      <image>
+					        <Image url="@../images/cards/first.jpg" />
+					      </image>
+					    </ImageView>
+					 </graphic>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="stapelCard4" onAction="#checkCard" style="-fx-background-color: #CD853F #CD853F;">
+                      <graphic>
+					    <ImageView fx:id="img4" fitHeight="170.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
+					      <image>
+					        <Image url="@../images/cards/first.jpg" />
+					      </image>
+					    </ImageView>
+					 </graphic>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="stapelCard5" onAction="#checkCard" style="-fx-background-color: #CD853F #CD853F;">
+                      <graphic>
+					    <ImageView fx:id="img5" fitHeight="170.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
+					      <image>
+					        <Image url="@../images/cards/first.jpg" />
+					      </image>
+					    </ImageView>
+					 </graphic>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="stapelCard6" onAction="#checkCard" style="-fx-background-color: #CD853F #CD853F;">
+                      <graphic>
+					    <ImageView fx:id="img6" fitHeight="170.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
+					      <image>
+					        <Image url="@../images/cards/first.jpg" />
+					      </image>
+					    </ImageView>
+					 </graphic>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="stapelCard7" onAction="#checkCard" style="-fx-background-color: #CD853F #CD853F;">
+                      <graphic>
+					    <ImageView fx:id="img7" fitHeight="170.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
+					      <image>
+					        <Image url="@../images/cards/first.jpg" />
+					      </image>
+					    </ImageView>
+					 </graphic>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </opaqueInsets>
+            </HBox>
+            <HBox layoutX="4.0" layoutY="270.0" prefHeight="47.0" prefWidth="1081.0">
+               <children>
+                  <Label fx:id="text" alignment="TOP_RIGHT" contentDisplay="CENTER" prefHeight="23.0" prefWidth="336.0" text="Karte wählen">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="20.0" top="15.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="weltwunderBauen" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#weltwunderBauenCard" prefHeight="27.0" prefWidth="168.0" text="Weltwunder bauen">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="40.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <opaqueInsets>
+                        <Insets bottom="50.0" left="50.0" right="50.0" />
+                     </opaqueInsets>
+                  </Button>
+                  <Button fx:id="gebaeudeBauen" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#gebaeudeBauenCard" text="Gebäude bauen">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="verkaufen" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#verkaufen" text="Karte verkaufen" textFill="#000103">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <GridPane alignment="CENTER" focusTraversable="true" gridLinesVisible="true" layoutX="256.0" layoutY="350.0" prefHeight="298.0" prefWidth="817.0" style="-fx-background-color: ;">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" prefWidth="130.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="130.0" prefWidth="130.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="700.0" minWidth="130.0" prefWidth="145.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="13.56890869140625" prefHeight="45.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="99.4132080078125" minHeight="63.98504638671875" prefHeight="94.92974853515625" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="50.532928466796875" prefHeight="100.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="45.53289794921875" prefHeight="100.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="spieler1" alignment="TOP_LEFT" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="spieler2" alignment="TOP_LEFT" contentDisplay="TOP" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="spieler3" alignment="TOP_LEFT" contentDisplay="TOP" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label accessibleRole="IMAGE_VIEW" alignment="CENTER" style="-fx-background-image: Holz.pgn;" GridPane.columnIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial Bold" size="10.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Holz.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" GridPane.columnIndex="4">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial Bold" size="10.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Erz.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" GridPane.columnIndex="5">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial Bold" size="10.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Stein.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Label GridPane.columnIndex="6">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial Bold" size="10.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Ziegel.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Label GridPane.columnIndex="7">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial Bold" size="10.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Glas.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Label GridPane.columnIndex="8">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial Bold" size="10.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Papyrus.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Label GridPane.columnIndex="9">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial Bold" size="10.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Stoff.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Label fx:id="cards1" alignment="CENTER" contentDisplay="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="cards2" alignment="CENTER" contentDisplay="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="cards3" alignment="CENTER" contentDisplay="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="cards4" alignment="CENTER" contentDisplay="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="cards5" alignment="CENTER" contentDisplay="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="cards6" alignment="CENTER" contentDisplay="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="holz1" alignment="CENTER" contentDisplay="CENTER" prefHeight="11.0" prefWidth="46.0" text="0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="holz2" alignment="CENTER" contentDisplay="CENTER" prefHeight="11.0" prefWidth="46.0" text="0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="holz3" alignment="CENTER" contentDisplay="CENTER" prefHeight="11.0" prefWidth="46.0" text="0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="erz1" alignment="CENTER" contentDisplay="CENTER" prefHeight="11.0" prefWidth="46.0" text="0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="erz2" alignment="CENTER" contentDisplay="CENTER" prefHeight="11.0" prefWidth="46.0" text="0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="erz3" alignment="CENTER" contentDisplay="CENTER" prefHeight="11.0" prefWidth="46.0" text="0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="stein1" alignment="CENTER" contentDisplay="CENTER" prefHeight="11.0" prefWidth="46.0" text="1" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="stein2" alignment="CENTER" contentDisplay="CENTER" prefHeight="11.0" prefWidth="46.0" text="1" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="stein3" alignment="CENTER" contentDisplay="CENTER" prefHeight="11.0" prefWidth="46.0" text="1" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ziegel1" alignment="CENTER" contentDisplay="CENTER" prefHeight="11.0" prefWidth="46.0" text="0" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ziegel2" alignment="CENTER" contentDisplay="CENTER" prefHeight="11.0" prefWidth="46.0" text="0" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ziegel3" alignment="CENTER" contentDisplay="CENTER" prefHeight="11.0" prefWidth="46.0" text="0" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="glas1" alignment="CENTER" contentDisplay="CENTER" prefHeight="11.0" prefWidth="46.0" text="0" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="glas2" alignment="CENTER" contentDisplay="CENTER" prefHeight="11.0" prefWidth="46.0" text="0" GridPane.columnIndex="7" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="glas3" alignment="CENTER" contentDisplay="CENTER" prefHeight="11.0" prefWidth="46.0" text="0" GridPane.columnIndex="7" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="papyrus1" alignment="CENTER" contentDisplay="CENTER" prefHeight="11.0" prefWidth="46.0" text="0" GridPane.columnIndex="8" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="papyrus2" alignment="CENTER" contentDisplay="CENTER" prefHeight="11.0" prefWidth="46.0" text="0" GridPane.columnIndex="8" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="papyrus3" alignment="CENTER" contentDisplay="CENTER" prefHeight="11.0" prefWidth="46.0" text="0" GridPane.columnIndex="8" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="stoff1" alignment="CENTER" contentDisplay="CENTER" prefHeight="11.0" prefWidth="46.0" text="0" GridPane.columnIndex="9" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="stoff2" alignment="CENTER" contentDisplay="CENTER" prefHeight="11.0" prefWidth="46.0" text="0" GridPane.columnIndex="9" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="stoff3" alignment="CENTER" contentDisplay="CENTER" prefHeight="11.0" prefWidth="46.0" text="0" GridPane.columnIndex="9" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label GridPane.columnIndex="10">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial Bold" size="10.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Weltwunder.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Label fx:id="board1" alignment="CENTER" contentDisplay="CENTER" prefHeight="11.0" prefWidth="49.0" text="0" GridPane.columnIndex="10" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="board2" alignment="CENTER" contentDisplay="CENTER" prefHeight="11.0" prefWidth="49.0" text="0" GridPane.columnIndex="10" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="board3" alignment="CENTER" contentDisplay="CENTER" prefHeight="11.0" prefWidth="49.0" text="0" GridPane.columnIndex="10" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label text="Zeitalter 1--Karten" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="Zeitalter 2--Karten" GridPane.columnIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="Spielername">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="17.0" prefWidth="51.0" GridPane.columnIndex="11">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial Bold" size="10.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/geld1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Label fx:id="muenze1" alignment="CENTER" contentDisplay="CENTER" prefHeight="11.0" prefWidth="49.0" text="3" GridPane.columnIndex="11" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="muenze2" alignment="CENTER" contentDisplay="CENTER" prefHeight="11.0" prefWidth="49.0" text="3" GridPane.columnIndex="11" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="muenze3" alignment="CENTER" contentDisplay="CENTER" prefHeight="11.0" prefWidth="49.0" text="3" GridPane.columnIndex="11" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <Glow />
+               </effect>
+            </GridPane>
+         </children>
+      </Pane>
+   </children>
+</VBox>
